@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article 01</title>
+    <meta name="description" content="A brief description" />
+    <meta name="author" content="Lucky Shrub Garden Design" />
+
+    <link rel="stylesheet" href="../styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar navbar-about">
+          <div class="logo logo-about">
+            <a href="../index.html">
+              <img
+                src="../images/logo.png"
+                width="30"
+                height="50"
+                alt="Logo Header"
+              />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../ideas.html">Garden Design Ideas</a></li>
+            <li><a href="../book.html">Book A Consultation</a></li>
+            <li><a href="../about.html">About</a></li>
+          </ul>
+          <a href="../index.html#articles" class="action-btn main">EXPLORE</a>
+          <div class="toggle-btn hide-navbar">
+            <i class="fa-solid fa-bars bar-default bar-onclick"></i>
+          </div>
+        </div>
+        <div class="dropdown-menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../ideas.html">Garden Design Ideas</a></li>
+          <li><a href="../book.html">Book A Consultation</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li>
+            <a href="../index.html#articles" class="action-btn hide-navbar"
+              >EXPLORE</a
+            >
+          </li>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="article-01">
+        <article>
+          <h2>Article 01</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tempor enim sit amet rutrum viverra. Nam sed lorem nec ante tempor
+            consequat. Aliquam erat volutpat. Suspendisse convallis sed magna eu
+            maximus. Nam a dui tempor, placerat diam lacinia, aliquet enim.
+            Proin eu dapibus purus. In dictum elit vel sapien convallis
+            ullamcorper. Aliquam semper, tortor eget aliquet aliquet, purus nisl
+            consequat nunc, nec volutpat leo nunc malesuada purus. Etiam sit
+            amet facilisis nisi. Duis ac posuere libero, quis dictum libero.
+            Quisque sollicitudin diam sed dolor molestie viverra. Nulla ornare
+            ultrices convallis. Donec cursus, enim vulputate fermentum congue,
+            felis nisi varius odio, at mattis nisi nisi sit amet dui.
+            Suspendisse suscipit tempus nisl et posuere. Morbi sagittis odio et
+            ligula placerat facilisis. Orci varius natoque penatibus et magnis
+            dis parturient montes, nascetur ridiculus mus.
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="logo-footer">
+        <img src="../images/logo.png" alt="Logo Footer" />
+      </div>
+      <div class="vline"></div>
+      <div class="copyright">
+        <p>
+          Copyright<br />
+          Lucky Shrub
+        </p>
+      </div>
+    </footer>
+    <script>
+      const toggleBtn = document.querySelector('.toggle-btn');
+      const toggleBtnIcon = document.querySelector('.toggle-btn i');
+      const dropDownMenu = document.querySelector('.dropdown-menu');
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open');
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.classList = isOpen
+          ? 'fa-solid fa-xmark xmark-onclick'
+          : 'fa-solid fa-bars bar-onclick';
+      };
+    </script>
+  </body>
+</html>
